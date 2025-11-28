@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mobis Enterprises — Quality Tech</title>
+<style>
+body{margin:0;font-family:Arial;background:#ffffff;color:#222;}
+.navbar{position:sticky;top:0;display:flex;justify-content:space-between;
+align-items:center;padding:14px 22px;background:#ffffff;box-shadow:0 4px 20px rgba(0,0,0,.15);}
+.hamburger{width:40px;height:32px;display:flex;align-items:center;justify-content:center;
+background:#f0f0f0;border-radius:6px;cursor:pointer;border:1px solid #ddd;}
+.hamburger span{width:20px;height:2px;background:#000;position:relative;}
+.hamburger span:before,.hamburger span:after{content:"";width:20px;height:2px;background:#000;
+position:absolute;left:0;}
+.hamburger span:before{top:-6px;}
+.hamburger span:after{top:6px;}
+.menu{display:none;background:#ffffff;box-shadow:0 6px 25px rgba(0,0,0,.15);padding:15px;
+position:absolute;top:60px;left:20px;border-radius:10px;width:150px;}
+.menu a{display:block;padding:8px 0;color:#000;text-decoration:none;font-weight:bold;}
+.container{max-width:900px;margin:30px auto;padding:10px;}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px;}
+.card{background:#fff;border-radius:12px;padding:12px;box-shadow:0 12px 35px rgba(0,0,0,.20);
+animation:fade 1.5s ease;}
+.card img{width:100%;border-radius:10px;height:180px;object-fit:cover;}
+.card a{display:block;margin-top:10px;background:#008cff;padding:10px;border-radius:8px;
+color:#fff;text-align:center;font-weight:bold;text-decoration:none;}
+@keyframes fade{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:flex;
+align-items:center;justify-content:center;z-index:10;}
+.modal{background:#ffffff;padding:25px;border-radius:12px;animation:fade 1.5s ease;
+width:80%;max-width:400px;text-align:center;color:#000;}
+.modal button{margin-top:15px;padding:10px 20px;background:#008cff;border:none;border-radius:8px;
+font-weight:bold;cursor:pointer;color:#fff;}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="hamburger" onclick="toggleMenu()"><span></span></div>
+  <div style="font-weight:bold;font-size:18px;">mobis enterprises</div>
+</div>
+
+<div id="menu" class="menu">
+  <a href="#">Home</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="modal" class="modal-backdrop">
+  <div class="modal">
+    <h2>Welcome to Mobis Enterprises</h2>
+    <p>Your number-one place for quality tech solutions. We bring ideas to life with passion, creativity, 
+    and professional excellence.</p>
+    <button onclick="document.getElementById('modal').style.display='none'">Enter</button>
+  </div>
+</div>
+
+<div class="container">
+  <h1>Mobis Enterprises</h1>
+  <p>We are committed to delivering outstanding digital solutions. Our goal is to help individuals and businesses
+  achieve quality results through technology, innovation, and creativity.</p>
+
+  <div class="grid">
+    <div class="card">
+      <img src="mypics.jpg" alt="">
+      <a href="https://www.google.com" target="_blank">Bring deals — We output quality results</a>
+    </div>
+
+    <div class="card">
+      <img src="mypics.jpg" alt="">
+      <a href="https://www.google.com" target="_blank">Bring deals — We output quality results</a>
+    </div>
+
+    <div class="card">
+      <img src="mypictures.jpg" alt="">
+      <a href="https://www.google.com" target="_blank">Bring deals — We output quality results</a>
+    </div>
+
+    <div class="card">
+      <img src="mypictures.jpg" alt="">
+      <a href="https://www.google.com" target="_blank">Bring deals — We output quality results</a>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleMenu(){
+  const menu = document.getElementById('menu');
+  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+
+</body>
+</html>
